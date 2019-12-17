@@ -1,17 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
+import axios from "axios";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <div className="container">
-        <Users />
+class App extends Component {
+  componentDidMount() {
+    axios
+      .get("https://api.github.com/users")
+      .then(res => console.log(res.data));
+  }
+  render() {
+    return (
+      <div className="App">
+        <Navbar />
+        <div className="container">
+          <Users />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
