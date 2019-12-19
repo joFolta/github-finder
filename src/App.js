@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./components/layout/Navbar";
 import Users from "./components/users/Users";
+import Spinner from "./components/layout/Spinner";
 import axios from "axios";
 import "./App.css";
 
@@ -24,7 +25,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <div className="container">
-          {loading ? <h1>Loading...</h1> : <Users users={users} />}
+          <Users loading={loading} users={users} />
         </div>
       </div>
     );
