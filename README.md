@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to use local environmental variables:
+
+- create ``.env.local`` file (name must begin with ``REACT_APP_...``)and add variables containing secure data like API Username and Password (this is a listed file in .gitignore)
+- must restart server (``npm start``) for environmental vars to take effect
+- call the variables in the code with ``process.env...`` (example: ``process.env.REACT_APP_GITHUB_CLIENT_ID``)
+- on Netlify deploy, you will list the environmental variables for the server
+
 ## Available Scripts
 
 In the project directory, you can run:
