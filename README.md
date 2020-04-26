@@ -2,6 +2,8 @@
 
 ![Preview](/public/preview.png)
 
+Update to the course: https://github.com/bushblade/RFTB2019_GitHub_Finder/tree/refactor
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to use local environmental variables:
